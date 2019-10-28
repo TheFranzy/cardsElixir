@@ -32,7 +32,14 @@ defmodule Cards do
   end
 
   @doc """
-  Returns a specified number of strings representing a hand of playing cards
+  Divides a list of playing cards into a hand and the remainder of the deck.
+  The `hand_size` argument indicates ow many cards should be in the and.
+
+  ## Examples
+      iex> deck = Cards.create_deck
+      iex> { hand, deck } = Cards.deal(deck, 1)
+      iex> hand
+      ["Ace of Spades"]
   """
   def deal(deck, hand_size) do
     Enum.split(deck, hand_size)
@@ -60,6 +67,12 @@ defmodule Cards do
 
   @doc """
   Returns a list of a specific number of strings representing playing cards
+
+  ## Examples
+
+      iex> { hand, deck } = Cards.create_hand(2)
+      iex> hand
+      ["King of Spades", "Three of Diamonds"]
   """
   def create_hand(hand_size) do
     Cards.create_deck
