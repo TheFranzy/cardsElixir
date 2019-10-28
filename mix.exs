@@ -26,10 +26,4 @@ defmodule Cards.MixProject do
       {:ex_doc, "~> 0.12"}
     ]
   end
-
-  # defp dep do
-  #   [
-  #     {:ex_doc, "~> 0.12"}
-  #   ]
-  # end
 end
